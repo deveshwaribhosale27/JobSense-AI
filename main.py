@@ -26,6 +26,19 @@ st.set_page_config(
 )
 
 
+st.set_page_config(
+    page_title="JobSense AI",
+    page_icon="💼",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        "Get help": None,
+        "Report a bug": None,
+        "About": None,
+    },
+)
+
+
 # ============================================================
 # HELPER FOR HTML
 # ============================================================
@@ -44,6 +57,7 @@ render_html("""
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 
 /* ================= GLOBAL ================= */
 html, body, [data-testid="stAppViewContainer"], [class*="css"] {
@@ -488,7 +502,7 @@ div[data-testid="stTextArea"] textarea:focus {
     }
 
     .hero {
-        padding: 23px 18px;
+        padding: 50px 18px;
         border-radius: 18px;
         margin-bottom: 18px;
     }
@@ -588,6 +602,13 @@ div[data-testid="stTextArea"] textarea:focus {
         font-size: 17px;
     }
 }
+
+
+/* Hide only the three-dot menu */
+[data-testid="stMainMenu"] {
+    display: none !important;
+}
+
 </style>
 """)
 
